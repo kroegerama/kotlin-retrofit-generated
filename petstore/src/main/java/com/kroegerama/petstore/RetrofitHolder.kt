@@ -40,8 +40,8 @@ object RetrofitHolder {
 
     val retrofit: Retrofit by lazy { retrofitBuilder.build() }
 
-    private val securityDefinitions = HashMap<String, String>()
 
+    private val securityDefinitions = HashMap<String, String>()
 
     fun setApiKey(authMethod: AuthMethod, apiKey: String) {
         securityDefinitions[authMethod.authName] = apiKey
@@ -72,7 +72,7 @@ object RetrofitHolder {
 }
 
 enum class AuthMethod(internal val authName: String) { 
-    ApiKey("api_key"),
+    ("api_key"),
 
-    PetstoreAuth("petstore_auth")
+    ("petstore_auth")
 }

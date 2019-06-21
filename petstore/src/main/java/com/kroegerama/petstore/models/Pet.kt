@@ -14,6 +14,7 @@ package com.kroegerama.petstore.models
 import com.kroegerama.petstore.models.Category
 import com.kroegerama.petstore.models.Tag
 
+
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -28,22 +29,23 @@ import com.squareup.moshi.JsonClass
  */
 @JsonClass(generateAdapter = true)
 data class Pet (
-    @Json(name = "name") val name: kotlin.String,
-
-    @Json(name = "photoUrls") val photoUrls: kotlin.Array<kotlin.String>,
-
-    @Json(name = "id") val id: kotlin.Long? = null,
-
-    @Json(name = "category") val category: Category? = null,
-
-    @Json(name = "tags") val tags: kotlin.Array<Tag>? = null,
-
-    @Json(name = "status") val status: Pet.Status? = null
+    @Json(name = "name")
+    val name: kotlin.String,
+    @Json(name = "photoUrls")
+    val photoUrls: kotlin.Array<kotlin.String>,
+    @Json(name = "id")
+    val id: kotlin.Long? = null,
+    @Json(name = "category")
+    val category: Category? = null,
+    @Json(name = "tags")
+    val tags: kotlin.Array<Tag>? = null,
+    @Json(name = "status")
+    val status: Pet.Status? = null
 ) {
 
     /**
     * pet status in the store
-    * Values: available,pending,sold
+    * Values: Available,Pending,Sold
     */
     enum class Status(val value: kotlin.String){
     

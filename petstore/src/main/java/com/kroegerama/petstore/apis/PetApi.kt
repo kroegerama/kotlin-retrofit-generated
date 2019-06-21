@@ -53,7 +53,7 @@ interface PetApi {
     @Headers(RetrofitHolder.AUTH_NAME_HEADER + ": petstore_auth")
     suspend fun deletePet(
         @Path("petId") petId: kotlin.Long,
-        @Header("api_key") apiKey: kotlin.String
+        @Header("api_key") apiKey: kotlin.String? = null
     ): Response<Unit>
 
     /**
@@ -139,8 +139,8 @@ interface PetApi {
     @Headers(RetrofitHolder.AUTH_NAME_HEADER + ": petstore_auth")
     suspend fun updatePetWithForm(
         @Path("petId") petId: kotlin.Long,
-        @Field("name") name: kotlin.String,
-        @Field("status") status: kotlin.String
+        @Field("name") name: kotlin.String? = null,
+        @Field("status") status: kotlin.String? = null
     ): Response<Unit>
 
     /**
@@ -159,8 +159,8 @@ interface PetApi {
     @Headers(RetrofitHolder.AUTH_NAME_HEADER + ": petstore_auth")
     suspend fun uploadFile(
         @Path("petId") petId: kotlin.Long,
-        @Field("additionalMetadata") additionalMetadata: kotlin.String,
-        @Field("file") file: MultipartBody.Part
+        @Field("additionalMetadata") additionalMetadata: kotlin.String? = null,
+        @Field("file") file: MultipartBody.Part? = null
     ): Response<ApiResponse>
 
 

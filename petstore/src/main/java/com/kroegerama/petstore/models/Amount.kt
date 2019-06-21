@@ -12,6 +12,7 @@
 package com.kroegerama.petstore.models
 
 
+
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -22,8 +23,9 @@ import com.squareup.moshi.JsonClass
  */
 @JsonClass(generateAdapter = true)
 data class Amount (
-    @Json(name = "value") val value: kotlin.Double,
-
-    @Json(name = "currency") val currency: kotlin.String
+    @Json(name = "value")
+    val value: kotlin.Double,
+    @Json(name = "currency")
+    val currency: kotlin.String
 )
 

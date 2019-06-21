@@ -12,6 +12,7 @@
 package com.kroegerama.petstore.models
 
 
+
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -23,10 +24,11 @@ import com.squareup.moshi.JsonClass
  */
 @JsonClass(generateAdapter = true)
 data class ApiResponse (
-    @Json(name = "code") val code: kotlin.Int? = null,
-
-    @Json(name = "type") val type: kotlin.String? = null,
-
-    @Json(name = "message") val message: kotlin.String? = null
+    @Json(name = "code")
+    val code: kotlin.Int? = null,
+    @Json(name = "type")
+    val type: kotlin.String? = null,
+    @Json(name = "message")
+    val message: kotlin.String? = null
 )
 

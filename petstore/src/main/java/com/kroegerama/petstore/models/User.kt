@@ -12,6 +12,7 @@
 package com.kroegerama.petstore.models
 
 
+
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -28,20 +29,21 @@ import com.squareup.moshi.JsonClass
  */
 @JsonClass(generateAdapter = true)
 data class User (
-    @Json(name = "id") val id: kotlin.Long? = null,
-
-    @Json(name = "username") val username: kotlin.String? = null,
-
-    @Json(name = "firstName") val firstName: kotlin.String? = null,
-
-    @Json(name = "lastName") val lastName: kotlin.String? = null,
-
-    @Json(name = "email") val email: kotlin.String? = null,
-
-    @Json(name = "password") val password: kotlin.String? = null,
-
-    @Json(name = "phone") val phone: kotlin.String? = null,
-
-    @Json(name = "userStatus") val userStatus: kotlin.Int? = null
+    @Json(name = "id")
+    val id: kotlin.Long? = null,
+    @Json(name = "username")
+    val username: kotlin.String? = null,
+    @Json(name = "firstName")
+    val firstName: kotlin.String? = null,
+    @Json(name = "lastName")
+    val lastName: kotlin.String? = null,
+    @Json(name = "email")
+    val email: kotlin.String? = null,
+    @Json(name = "password")
+    val password: kotlin.String? = null,
+    @Json(name = "phone")
+    val phone: kotlin.String? = null,
+    @Json(name = "userStatus")
+    val userStatus: kotlin.Int? = null
 )
 
